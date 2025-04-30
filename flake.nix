@@ -5,9 +5,11 @@
     # editing flake.nix triggers certain utilities such as direnv
     # to reload - editing host configurations do not require a direnv
     # reload, so lets move hosts out of the way
-    nixosConfigurations = nixpkgs.lib.nixosSystem {
-    system = "x86_64-linux";
-    modules = [ /etc/nixos/configuration.nix ];
+    nixosConfigurations = {
+     nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [ /etc/nixos/configuration.nix ];
+    };
    };
   };
   inputs = {
