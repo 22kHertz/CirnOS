@@ -114,6 +114,15 @@
       wget
       nixpkgs-fmt
       nixfmt
+      alacritty
+      sl
+      kitty
+      obsidian
+      neofetch
+      python3
+      git
+      tmux
+      youtube-music
     ];
   };
 
@@ -183,5 +192,5 @@
     # '';
   };
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.11";
 }
